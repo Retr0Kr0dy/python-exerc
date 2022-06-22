@@ -26,6 +26,7 @@ print 50 random integer between 0 and 100, if the random integer is a multiple o
 In mathematics, the Fibonacci numbers, commonly denoted Fn , form a sequence, the Fibonacci sequence, in which each number is the sum of the two preceding ones. The sequence commonly starts from 0 and 1, although some authors omit the initial terms and start the sequence from 1 and 1 or from 1 and 2.
 
 <h6>Thanks Wikipedia.</h6>
+
 ```
 Usage  ;  fibancci.py <iteration>
   
