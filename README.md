@@ -9,10 +9,10 @@ In mathematics, the Fibonacci numbers, commonly denoted Fn , form a sequence, 
 
 ### Usage :
 ```
-Command  ;  fibonacci.py <iteration> |or| fibonacci.py r <iteration>
+Command  ;  fibonacci.py [r] <iteration>
   
-  exemple  ; fibonacci.py 4        will return 3
-  exemple  ; fibonacci.py r 4      will return 1, 2, 3
+  example  ; fibonacci.py 4        will return 3
+  example  ; fibonacci.py r 4      will return 1, 2, 3
 ```
 
 ## fizz-buzz
