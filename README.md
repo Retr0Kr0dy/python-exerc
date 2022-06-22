@@ -28,7 +28,8 @@ In mathematics, the Fibonacci numbers, commonly denoted Fn , form a sequence, 
 <h6>Thanks Wikipedia.</h6>
 
 ```
-Usage  ;  fibonacci.py <iteration>
+Usage  ;  fibonacci.py <iteration> |or| fibonacci.py r <iteration>
   
-  exemple  ; fibonacci.py 14        will return 377
+  exemple  ; fibonacci.py 4        will return 3
+  exemple  ; fibonacci.py r 4      will return 1, 2, 3
 ```
