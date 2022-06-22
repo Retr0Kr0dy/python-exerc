@@ -20,3 +20,13 @@ x = 1211      so...    there's one iter of 1, one iter of 2,
 ## FizzBuzz
 
 print 50 random integer between 0 and 100, if the random integer is a multiple of 3, print Fizz instead of the int. if the random integer is a multiple of 5 print Buzz, and if the random integer is a multiple of both, print FizzBuzz.
+
+## FizzBuzz
+
+In mathematics, the Fibonacci numbers, commonly denoted Fn , form a sequence, the Fibonacci sequence, in which each number is the sum of the two preceding ones. The sequence commonly starts from 0 and 1, although some authors omit the initial terms and start the sequence from 1 and 1 or from 1 and 2.
+
+<h6>Thanks Wikipedia.</h6>
+
+Usage  ;  fibancci.py <iteration>
+  
+  exemple  ; fibancci.py 14        will return 377
