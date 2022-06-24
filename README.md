@@ -10,9 +10,13 @@ In mathematics, the Fibonacci numbers, commonly denoted Fn , form a sequence, 
 ### Usage :
 ```
 Command  ;  fibonacci.py [r] <iteration>
-  
+
+Option   ;  r  : print all iteration between F2 and Fx
+
   example  ; fibonacci.py 4        will return 3
   example  ; fibonacci.py r 4      will return 1, 2, 3
+  
+
 ```
 
 ## fizz-buzz
