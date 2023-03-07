@@ -1,41 +1,45 @@
-try:
-    import sys
-    xv="01"
-    inp=sys.argv[1]
-    if inp == "r":
-        print(inp)
-        r = sys.argv[2]
-        x=0
-        y=1
-        def Fibo(x,y):
-            z = x + y
-            return x,y,z
-        def CountingFibo(x,y,xv):
-            for i in range(1,int(r)):
-                x, y, z = Fibo(x,y)
-                x=y
-                y=z
-                xv = xv + str(z)
-                print("i =",i,"   \t\t\t\t",str(z))
-        CountingFibo(x,y,xv)
-    elif inp == "0":
-        print("0")
-    elif inp == "1":
-        print("1")
+#!/usr/bin/env python3
+from argparse import ArgumentParser
+from sys import exit
+
+"""
+Actually doing math.
+"""
+def my_fibo(stop) -> list:
+    ret = []
+    x,y,c   = 3*[0,]
+    y       = y+1
+
+    while (c <= stop):
+        ret.append((x+y))
+        x  = y
+        y  = ret[len(ret)-1]
+        c  = c+1
+
+    return ret
+
+"""
+Pasing arguments.
+"""
+def parser() -> tuple:
+    p = ArgumentParser()
+    p.add_argument( "value", nargs="?", help="Input value.")
+    p.add_argument( "--range", "-r",  help="Print range from 0 to value.")
+
+    return p.parse_args()
+
+"""
+Main func, handling other funcs.
+"""
+def main() -> int:
+    args = parser()
+    if args.value:
+        print(my_fibo(int(args.value))[int(args.value)])
+    elif args.range:
+        for i in (my_fibo(int(args.range))): print(i)
     else:
-        x=0
-        y=1
-        def Fibo(x,y):
-            z = x + y
-            return x,y,z
-        def CountingFibo(x,y,xv):
-            for i in range(1,int(inp)):
-                x, y, z = Fibo(x,y)
-                x=y
-                y=z
-                xv = xv + str(z)
-            return xv, str(z)
-        aa,bb=CountingFibo(x,y,xv)
-        print(bb)
-except:
-    print("\n  Usage  ;  fibonacci.py <iteration> |or| fibonacci.py r <iteration>")
+        print("[ERROR] - bad usage !!!\n\ntry\n\tfibo.py -r 12\nor\n\tfibo.py 12")
+    return 0
+
+if __name__ == "__main__":
+    exit(main())
